@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         cam = Camera.main; 
     }
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition)
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
 
