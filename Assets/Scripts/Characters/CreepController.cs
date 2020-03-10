@@ -7,21 +7,18 @@ using UnityEngine.AI;
 public class CreepController : MonoBehaviour
 {
     NavMeshAgent agent;
-    GameObject finalTarget;
-
-
+     public GameObject finalTarget; 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
     }
     void Start()
     {
+        if (finalTarget !=null) 
+        {
+            agent.SetDestination(finalTarget.transform.position);
+        }
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }
